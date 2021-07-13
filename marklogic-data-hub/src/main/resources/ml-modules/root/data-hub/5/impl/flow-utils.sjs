@@ -501,7 +501,7 @@ const sem = require("/MarkLogic/semantics.xqy");
     for (let key in options.headers) {
       headers[key] = evalSubstituteVal(options.headers[key]);
     }
-    if(options.file) {
+    if(options.ffileile) {
         headers["createdUsingFile"] = options.file;
     }
 

@@ -503,7 +503,7 @@ const Browse: React.FC<Props> = ({location}) => {
                 />
               </div>
               <div className={styles.viewContainer} >
-                <div className={styles.fixedView} >
+                <div>
                   {cardView ?
                     <RecordCardView
                       data={data}
@@ -528,25 +528,28 @@ const Browse: React.FC<Props> = ({location}) => {
                     )}
                 </div>
                 <br />
-                <div>
-                  <SearchSummary
-                    total={totalDocuments}
-                    start={searchOptions.start}
-                    length={searchOptions.pageLength}
-                    pageSize={searchOptions.pageSize}
-                  />
-                  <SearchPagination
-                    total={totalDocuments}
-                    pageNumber={searchOptions.pageNumber}
-                    pageSize={searchOptions.pageSize}
-                    pageLength={searchOptions.pageLength}
-                    maxRowsPerPage={searchOptions.maxRowsPerPage}
-                  />
-                </div>
+
+              </div>
+              <div>
+                <SearchSummary
+                  total={totalDocuments}
+                  start={searchOptions.start}
+                  length={searchOptions.pageLength}
+                  pageSize={searchOptions.pageSize}
+                />
+                <SearchPagination
+                  total={totalDocuments}
+                  pageNumber={searchOptions.pageNumber}
+                  pageSize={searchOptions.pageSize}
+                  pageLength={searchOptions.pageLength}
+                  maxRowsPerPage={searchOptions.maxRowsPerPage}
+                />
               </div>
             </>
+
           }
         </Content>
+
       </Layout>
     );
   }
